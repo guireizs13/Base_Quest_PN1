@@ -357,12 +357,12 @@ function avancarHistoria() {
                     }
                 },
                 {
-                    texto: "Ler novamente",
+                    texto: "Reescrever texto",
                     acao: avancarHistoria
                 }
             ]);
         },
-        50  // velocidade de escrita do texto
+        50  
     );
 }
 
