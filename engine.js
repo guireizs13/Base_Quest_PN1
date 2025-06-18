@@ -1,4 +1,3 @@
-// engine.js bloco 1
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 function escreverTexto(texto, callback = null, velocidade = 80) { 
@@ -158,7 +157,6 @@ function combateRodada(inimigo) {
     const nome = document.getElementById("nome-inimigo");
     const inimigoVisual = document.getElementById("inimigo-visual");
     
-    // rola até o HUD e exibe uma única vez
     hud.scrollIntoView({ 
       behavior: "smooth",
       block: "center"
@@ -225,7 +223,7 @@ function combateRodada(inimigo) {
         if (resposta.trim().toUpperCase() === perguntaAtual.resposta.toUpperCase()) {
             gerarSom8Bit("acerto");
             desempenhoFinal.acertos++;
-            inimigo.acertosTema++;    // incrementa acertos no tema
+            inimigo.acertosTema++;    
             inimigo.vida--;
 
             escreverTexto(
@@ -235,7 +233,7 @@ function combateRodada(inimigo) {
         } else {
             gerarSom8Bit("erro");
             desempenhoFinal.erros++;
-            inimigo.errosTema++;      // incrementa erros no tema
+            inimigo.errosTema++;      
             vidas--;
             atualizarVidasHUD();
 
